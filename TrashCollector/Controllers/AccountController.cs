@@ -167,7 +167,7 @@ namespace TrashCollector.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Users");
+                    return RedirectToAction("Index", "Customers");
                 }
                 ViewBag.Name = new SelectList(context.Roles.Where(m => !m.Name.Contains("Admin")).ToList(), "Name", "Name");
                 AddErrors(result);
