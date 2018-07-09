@@ -123,3 +123,4 @@ C:\Users\Rigoberto Ramirez\Desktop\portfolio\Projects\TrashCollector\TrashCollec
 C:\Users\Rigoberto Ramirez\Desktop\portfolio\Projects\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.Createdcustomeremployees.resources
 C:\Users\Rigoberto Ramirez\Desktop\portfolio\Projects\TrashCollector\TrashCollector\obj\Debug\TrashCollector.csproj.GenerateResource.cache
 C:\Users\Rigoberto Ramirez\Desktop\portfolio\Projects\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.UpdatedEmployeeClass.resources
+C:\Users\Rigoberto Ramirez\Desktop\portfolio\Projects\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.AddedRolesandneedtoremigratetotestfunctionality.resources

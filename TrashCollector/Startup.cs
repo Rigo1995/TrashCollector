@@ -13,7 +13,7 @@ namespace TrashCollector
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
-            //CreateRolesandUsers();
+            CreateRolesAndUsers();
         }
 
         private void CreateRolesAndUsers()
@@ -32,14 +32,22 @@ namespace TrashCollector
                 user.UserName = "Rigo";
                 user.Email = "Rigo@gmail.com";
 
-                string userPWD = "A@123456";
+                string userPWD = "Aa@123456";
 
                 var chkUser = UserManager.Create(user, userPWD);
 
                 if (chkUser.Succeeded)
                 {
-                    var result1 = UserManager.Create(user, "Customer");
+                    var result1 = UserManager.Create(user, "Admin");
                 }
+
+            }
+
+            if (!roleManager.RoleExists("Manager"))
+            {
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = "Manager";
+                roleManager.Create(role);
 
             }
 
@@ -49,6 +57,8 @@ namespace TrashCollector
                 role.Name = "Employee";
 
             }
+
+
         }
      
     }

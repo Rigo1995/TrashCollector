@@ -211,6 +211,10 @@
     <Compile Include="Migrations\201807052024292_Updated Employee Class.Designer.cs">
       <DependentUpon>201807052024292_Updated Employee Class.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807062118092_Added Roles and need to re migrate to test functionality.cs" />
+    <Compile Include="Migrations\201807062118092_Added Roles and need to re migrate to test functionality.Designer.cs">
+      <DependentUpon>201807062118092_Added Roles and need to re migrate to test functionality.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -315,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807052024292_Updated Employee Class.resx">
       <DependentUpon>201807052024292_Updated Employee Class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807062118092_Added Roles and need to re migrate to test functionality.resx">
+      <DependentUpon>201807062118092_Added Roles and need to re migrate to test functionality.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
