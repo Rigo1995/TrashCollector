@@ -92,8 +92,8 @@ namespace TrashCollector.Models
         [Display(Name = "UserRoles")]
         public string UserRoles { get; set; }
 
-        [Display(Name = "remember me?")]
-        public bool RememberMe { get; set; }
+        //[Display(Name = "remember me?")]
+        //public bool RememberMe { get; set; }
 
     }
 

@@ -183,7 +183,7 @@ namespace TrashCollector.Controllers
                     await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
 
                     // TODO: Where to re-route?
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "User");
                 }
                 ViewBag.Name = new SelectList(context.Roles.Where(m => !m.Name.Contains("Admin")).ToList(), "Name", "Name");
                 AddErrors(result);
