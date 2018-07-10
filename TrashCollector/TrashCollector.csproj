@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201807101419063_initial reset.Designer.cs">
       <DependentUpon>201807101419063_initial reset.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807101447304_added customer foreign key and connected it to asp.netUsers.cs" />
+    <Compile Include="Migrations\201807101447304_added customer foreign key and connected it to asp.netUsers.Designer.cs">
+      <DependentUpon>201807101447304_added customer foreign key and connected it to asp.netUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -308,6 +312,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201807101419063_initial reset.resx">
       <DependentUpon>201807101419063_initial reset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807101447304_added customer foreign key and connected it to asp.netUsers.resx">
+      <DependentUpon>201807101447304_added customer foreign key and connected it to asp.netUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

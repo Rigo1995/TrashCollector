@@ -122,3 +122,4 @@ C:\Users\Rigoberto Ramirez\Desktop\portfolio\Projects\TrashCollector\TrashCollec
 C:\Users\Rigoberto Ramirez\Desktop\portfolio\Projects\TrashCollector\TrashCollector\obj\Debug\TrashCollector.pdb
 C:\Users\Rigoberto Ramirez\Desktop\portfolio\Projects\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.initialreset.resources
 C:\Users\Rigoberto Ramirez\Desktop\portfolio\Projects\TrashCollector\TrashCollector\obj\Debug\TrashCollector.csproj.GenerateResource.cache
+C:\Users\Rigoberto Ramirez\Desktop\portfolio\Projects\TrashCollector\TrashCollector\obj\Debug\TrashCollector.Migrations.addedcustomerforeignkeyandconnectedittoaspnetUsers.resources
