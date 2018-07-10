@@ -16,6 +16,7 @@ namespace TrashCollector.Models
         public string StreetAdress { get; set; }
         public string State { get; set; }
         public string ZipCode { get; set; }
+        public string Email { get; set; }
         public DateTime Date { get; set; }   
         public List <Customers> Customers { get; set; }
 

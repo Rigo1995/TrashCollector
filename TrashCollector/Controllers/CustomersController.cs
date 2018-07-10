@@ -56,7 +56,7 @@ namespace TrashCollector.Controllers
 
                 db.Customers.Add(customers);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "Customer");
             }
 
             return View(customers);

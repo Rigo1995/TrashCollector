@@ -89,7 +89,11 @@ namespace TrashCollector.Controllers
                     }
                     else
                     {
-                        // where do customers go?
+                        if (User.IsInRole("Customer"))
+                        {
+                            return RedirectToAction("Details", "Customers");
+                        }
+                        //return RedirectToAction("Details","Customers");// where do customers go?
                     }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
@@ -151,7 +155,7 @@ namespace TrashCollector.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin") && !u.Name.Contains("Manager") && !u.Name.Contains("Employee")).ToList(), "Name", "Name");
+            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin") && !u.Name.Contains("Manager") /*&& !u.Name.Contains("Employee")*/).ToList(), "Name", "Name");
                                            
             return View();
         }

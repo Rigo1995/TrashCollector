@@ -211,6 +211,10 @@
     <Compile Include="Migrations\201807101447304_added customer foreign key and connected it to asp.netUsers.Designer.cs">
       <DependentUpon>201807101447304_added customer foreign key and connected it to asp.netUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807101555221_added more to customer table.cs" />
+    <Compile Include="Migrations\201807101555221_added more to customer table.Designer.cs">
+      <DependentUpon>201807101555221_added more to customer table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -315,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807101447304_added customer foreign key and connected it to asp.netUsers.resx">
       <DependentUpon>201807101447304_added customer foreign key and connected it to asp.netUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807101555221_added more to customer table.resx">
+      <DependentUpon>201807101555221_added more to customer table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
