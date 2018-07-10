@@ -69,7 +69,9 @@ namespace TrashCollector.Controllers
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
-        {
+        { 
+           
+
             if (!ModelState.IsValid)
             {
                 return View(model);
@@ -81,6 +83,14 @@ namespace TrashCollector.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
+                    if (User.IsInRole("Employee"))
+                    {
+                        return RedirectToAction("Index", "Employees");
+                    }
+                    else
+                    {
+                        // where do customers go?
+                    }
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -141,7 +151,7 @@ namespace TrashCollector.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin") && !u.Name.Contains("Manager") && !u.Name.Contains("Employee")).ToList(), "Name", "Name");
+            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin") && !u.Name.Contains("Manager") /*&& !u.Name.Contains("Employee")*/).ToList(), "Name", "Name");
                                            
             return View();
         }
@@ -168,6 +178,7 @@ namespace TrashCollector.Controllers
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
                     await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
 
+                    // TODO: Where to re-route?
                     return RedirectToAction("Index", "Home");
                 }
                 ViewBag.Name = new SelectList(context.Roles.Where(m => !m.Name.Contains("Admin")).ToList(), "Name", "Name");

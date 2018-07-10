@@ -203,17 +203,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807051918227_Created customer employees.cs" />
-    <Compile Include="Migrations\201807051918227_Created customer employees.Designer.cs">
-      <DependentUpon>201807051918227_Created customer employees.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807052024292_Updated Employee Class.cs" />
-    <Compile Include="Migrations\201807052024292_Updated Employee Class.Designer.cs">
-      <DependentUpon>201807052024292_Updated Employee Class.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807062118092_Added Roles and need to re migrate to test functionality.cs" />
-    <Compile Include="Migrations\201807062118092_Added Roles and need to re migrate to test functionality.Designer.cs">
-      <DependentUpon>201807062118092_Added Roles and need to re migrate to test functionality.cs</DependentUpon>
+    <Compile Include="Migrations\201807101419063_initial reset.cs" />
+    <Compile Include="Migrations\201807101419063_initial reset.Designer.cs">
+      <DependentUpon>201807101419063_initial reset.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -314,14 +306,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807051918227_Created customer employees.resx">
-      <DependentUpon>201807051918227_Created customer employees.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807052024292_Updated Employee Class.resx">
-      <DependentUpon>201807052024292_Updated Employee Class.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807062118092_Added Roles and need to re migrate to test functionality.resx">
-      <DependentUpon>201807062118092_Added Roles and need to re migrate to test functionality.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807101419063_initial reset.resx">
+      <DependentUpon>201807101419063_initial reset.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
