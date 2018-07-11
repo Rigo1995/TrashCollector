@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TrashCollector.Models.Customers>
+﻿@model TrashCollector.Models.Customers
 
 @{
     ViewBag.Title = "Index";
@@ -32,32 +32,32 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
+            @Html.DisplayFor(model => model.FirstName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.LastName)
+            @Html.DisplayFor(model => model.LastName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.StreetAdress)
+            @Html.DisplayFor(model => model.StreetAdress)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.State)
+            @Html.DisplayFor(model => model.State)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ZipCode)
+            @Html.DisplayFor(model => model.ZipCode)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Date)
+            @Html.DisplayFor(model => model.Date)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=Model.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=Model.Id })
         </td>
     </tr>
-}
+
 
 </table>

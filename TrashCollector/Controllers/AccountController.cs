@@ -465,7 +465,7 @@ namespace TrashCollector.Controllers
             }
         }
 
-        private ActionResult RedirectToLocal(string returnUrl)
+        private ActionResult RedirectToLocal(string returnUrl)  //redirects here after if statatemnt
         {
             if (Url.IsLocalUrl(returnUrl))
             {

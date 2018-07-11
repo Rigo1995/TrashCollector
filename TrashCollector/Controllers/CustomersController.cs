@@ -18,7 +18,10 @@ namespace TrashCollector.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            return View(db.Customers.ToList());
+            var currentUserId = User.Identity.GetUserId();
+
+            var customer = db.Customers.Where(m => m.UserId == currentUserId).First();
+            return View(customer);
         }
 
         // GET: Customers/Details/5
@@ -56,7 +59,8 @@ namespace TrashCollector.Controllers
 
                 db.Customers.Add(customers);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index");                                                                                       //strill returns customr index after registry fix it later!***********************************************
+
             }
 
             return View(customers);
