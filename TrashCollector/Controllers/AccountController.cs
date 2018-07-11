@@ -149,7 +149,7 @@ namespace TrashCollector.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin") && !u.Name.Contains("Manager") /*&& !u.Name.Contains("Employee")*/).ToList(), "Name", "Name");
+            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin") && !u.Name.Contains("Manager") && !u.Name.Contains("Employee")).ToList(), "Name", "Name");
                                            
             return View();
         }
@@ -177,14 +177,14 @@ namespace TrashCollector.Controllers
                     await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
 
                     // TODO: Where to re-route?
-                    if (ModelState.IsValid)
-                    { 
-                        //if (ActionResult.Equals.Login)
-                        //{
 
-                        //}
-                       return RedirectToAction("Index", "customer");
+
+                    if (ModelState.IsValid)
+                    {
+
+
                     }
+                    return RedirectToAction("Create", "Customers"); /*<==should be used for employee*/
                 }
                 ViewBag.Name = new SelectList(context.Roles.Where(m => !m.Name.Contains("Admin")).ToList(), "Name", "Name");
                 AddErrors(result);
