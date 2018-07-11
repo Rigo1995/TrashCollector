@@ -70,12 +70,6 @@ namespace TrashCollector.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         { 
-           
-
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
@@ -85,7 +79,7 @@ namespace TrashCollector.Controllers
                 case SignInStatus.Success:
                     if (User.IsInRole("Employee"))
                     {
-                        return RedirectToAction("Index", "Employees");
+                        return RedirectToAction("Index", "Customers");
                     }
                     else
                     {
@@ -183,7 +177,14 @@ namespace TrashCollector.Controllers
                     await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
 
                     // TODO: Where to re-route?
-                    return RedirectToAction("Index", "User");
+                    if (ModelState.IsValid)
+                    { 
+                        //if (ActionResult.Equals.Login)
+                        //{
+
+                        //}
+                       return RedirectToAction("Index", "customer");
+                    }
                 }
                 ViewBag.Name = new SelectList(context.Roles.Where(m => !m.Name.Contains("Admin")).ToList(), "Name", "Name");
                 AddErrors(result);
